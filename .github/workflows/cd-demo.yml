@@ -1,0 +1,9 @@
+on:
+    workflow_dispatch
+
+jobs:
+    example-cd:
+        runs-on: ubuntu-latest
+        steps:
+            - run: curl -dH -X POST '${{ secrets.WEBHOOK }}'
+            - run: curl -dH -X POST "${{ secrets.WEBHOOK }}"
